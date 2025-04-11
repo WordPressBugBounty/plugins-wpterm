@@ -1,9 +1,9 @@
 === WPTerm ===
 Contributors: bruandet
-Tags: xterm, terminal, command, bash, shell, linux, unix, BSD
+Tags: xterm, terminal, command, bash, shell
 Requires at least: 3.3.0
-Tested up to: 5.9
-Stable tag: 1.1.9
+Tested up to: 6.8
+Stable tag: 1.2
 License: GPLv3 or later
 Requires PHP: 5.3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -12,7 +12,7 @@ An xterm-like plugin to run non-interactive shell commands.
 
 == Description ==
 
-= Terminal =
+= An xterm-like plugin to run non-interactive shell commands. =
 
 WPTerm is an xterm-like plugin. It can be used to run non-interactive shell commands from the WordPress admin dashboard.
 
@@ -84,6 +84,12 @@ WPTerm works on Unix-like servers only.
 7. Contextual help.
 
 == Changelog ==
+
+= 1.2 =
+
+* Communication between the terminal and the plugin will be base64-encoded to prevent security applications such as ModSecurity to block the AJAX request.
+* Fixed a PHP "Function _load_textdomain_just_in_time was called incorrectly" notice.
+* Ensure compatibility with WordPress 6.8
 
 = 1.1.9 =
 

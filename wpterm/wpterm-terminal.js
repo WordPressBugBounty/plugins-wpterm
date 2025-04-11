@@ -411,7 +411,7 @@ jQuery( "#terminal" ).bind('keydown paste', function( event ) {
 		var data = {
 			'action': 'wptermajax',
 			'wpterm_ajax_nonce': wpterm_ajax_nonce,
-			'cmd': command,
+			'cmd': btoa( command ),
 			'cwd': cwd,
 			'exec': exec,
 			'abs': abspath,

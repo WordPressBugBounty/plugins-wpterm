@@ -4,7 +4,7 @@ Plugin Name: WPTerm
 Plugin URI: https://nintechnet.com/bruandet/
 Description: An xterm-like plugin to run non-interactive shell commands.
 Author: Jerome Bruandet
-Version: 1.1.9
+Version: 1.2
 Author URI: https://nintechnet.com/
 Text Domain: wpterm
 Domain Path: /languages
@@ -21,15 +21,11 @@ Network: true
  | (c) Jerome Bruandet ~ https://nintechnet.com/                       |
  +=====================================================================+
 */
-define( 'WPTERM_VERSION', '1.1.9' );
+define( 'WPTERM_VERSION', '1.2' );
 
 /* ================================================================== */
 
 if (! defined( 'ABSPATH' ) ) { die( 'Forbidden' ); }
-
-/* ================================================================== */
-
-$null = __('An xterm-like plugin to run non-interactive shell commands.', 'wpterm');
 
 /* ================================================================== */
 // Force WP to load our translation files.
@@ -991,7 +987,7 @@ function wptermajax_callback() {
 			$scrollback = (int)$_POST['scrollback'];
 		}
 		// We don't want WordPress to escape strings with slashes:
-		$cmd = stripslashes( trim( $_POST['cmd'] ) );
+		$cmd = stripslashes( base64_decode( trim( $_POST['cmd'] ) ) );
 		$cwd = stripslashes( trim( $_POST['cwd'] ) );
 		$abs = stripslashes( trim( $_POST['abs'] ) );
 		// Set the ABSPATH variable, go to the current working directory,

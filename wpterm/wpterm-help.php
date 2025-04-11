@@ -17,6 +17,8 @@ if (! defined( 'ABSPATH' ) ) { die( 'Forbidden' ); }
 
 function wpterm_help() {
 
+	$null = __('An xterm-like plugin to run non-interactive shell commands.', 'wpterm');
+
 	// Contextual help:
 
 	get_current_screen()->add_help_tab( array(
