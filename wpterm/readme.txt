@@ -1,11 +1,11 @@
 === WPTerm ===
 Contributors: bruandet
 Tags: xterm, terminal, command, bash, shell
-Requires at least: 3.3.0
-Tested up to: 6.8
-Stable tag: 1.2
+Requires at least: 5.0
+Tested up to: 7.0
+Stable tag: 1.3
 License: GPLv3 or later
-Requires PHP: 5.3
+Requires PHP: 7.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 An xterm-like plugin to run non-interactive shell commands.
@@ -57,8 +57,8 @@ You can (and probably should!) password protect the access to WPTerm. Consult th
 
 = Requirements =
 
-* WordPress 3.3+
-* PHP 5.3+
+* WordPress 5.0+
+* PHP 7.0+
 * Unix-like OS (Linux, *BSD etc) only. WPTerm is **NOT** compatible with Microsoft Windows.
 
 == Frequently Asked Questions ==
@@ -84,6 +84,13 @@ WPTerm works on Unix-like servers only.
 7. Contextual help.
 
 == Changelog ==
+
+
+= 1.3
+
+* Many small fixes and improvements: useless/obsolete parts of code removed, terminal's AJAX code improved, translation strings escaped, bugs fixed etc.
+* If `DISALLOW_FILE_MODS` is set on the blog, access to the terminal will be refused.
+* WPTerm requires now at least PHP 7.0 and WordPress 5.0.
 
 = 1.2 =
 

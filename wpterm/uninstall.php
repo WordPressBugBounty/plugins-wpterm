@@ -16,12 +16,9 @@ if (! defined('WP_UNINSTALL_PLUGIN') ) {
 }
 
 if ( is_multisite() ) {
-	delete_site_option( 'wpterm_options' );
+	delete_site_option('wpterm_options');
 }
-delete_option( 'wpterm_options' );
-if ( isset( $_SESSION['wptermpwd'] ) ) {
-	unset( $_SESSION['wptermpwd'] );
-}
+delete_option('wpterm_options');
 
 /* ================================================================== */
 // EOF
